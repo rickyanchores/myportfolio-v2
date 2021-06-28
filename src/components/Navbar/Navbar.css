@@ -1,5 +1,60 @@
 .Navbar {
   background: thistle;
   padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .hamburger {
+  display: none;
+}
+
+.Navbar .hamburger .line {
+  width: 20px;
+  margin: 3px;
+  height: 3px;
+  background: black;
+}
+
+.Navbar .navlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  list-style: none;
+}
+
+@media (max-width: 700px) {
+  .Navbar .hamburger {
+    display: block;
+  }
+  .Navbar .navlinks {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Navbar .navlinks li {
+    padding: 1em;
+  }
+  .Navbar .navlinks.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */

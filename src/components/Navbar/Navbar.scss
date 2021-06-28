@@ -3,4 +3,44 @@
 .Navbar{
     background: thistle;
     padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .hamburger{
+      display: none;
+      .line{
+        width: 20px;
+        margin: 3px;
+        height: 3px;
+        background: black;
+      }
+    }
+    .navlinks{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 40%;
+      list-style: none;
+    }
+  }
+
+
+  @media(max-width: 700px){
+    .Navbar{
+      .hamburger{
+        display: block;
+      }
+      .navlinks{
+        //display: none;
+        width: 100%;
+        flex-direction: column;
+        li{
+          padding: 1em;
+        }
+      }
+      .navlinks.open{
+        display: flex;
+      }
+    }
   }
